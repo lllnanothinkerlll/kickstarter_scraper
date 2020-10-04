@@ -39,22 +39,22 @@ class kickstarter_scraper:
 			for item in json_request["projects"]:
 				try:
 					tag_dataframe_dict[index] = {
-											"tag": tag,
-											"name": item["name"], 
-										 	"category_name": item["category"]["name"], 
-										 	"URL": item["urls"]["web"]["project"], 
-										 	"creator_name": item["creator"]["name"], 
-										 	"creator_URL": item["creator"]["urls"]["web"]["user"],
-										 	"created": item["created_at"],
-										 	"launched": item["launched_at"],
-										 	"deadline": item["deadline"],
-										 	"goal": item["goal"],
-										 	"pledged": str(item["pledged"]) + item["currency"],
-										 	"pledged_usd": item["usd_pledged"],
-										 	"current_state": item["state"],
-										 	"backers": item["backers_count"],
-										 	"location": item["location"]["displayable_name"]
-											}
+									"tag": tag,
+									"name": item["name"], 
+									"category_name": item["category"]["name"], 
+								 	"URL": item["urls"]["web"]["project"], 
+								 	"creator_name": item["creator"]["name"], 
+								 	"creator_URL": item["creator"]["urls"]["web"]["user"],
+									"created": item["created_at"],
+								 	"launched": item["launched_at"],
+								 	"deadline": item["deadline"],
+								 	"goal": item["goal"],
+								 	"pledged": str(item["pledged"]) + item["currency"],
+									"pledged_usd": item["usd_pledged"],
+								 	"current_state": item["state"],
+								 	"backers": item["backers_count"],
+								 	"location": item["location"]["displayable_name"]
+									}
 
 					index += 1
 				except:
@@ -95,21 +95,21 @@ class kickstarter_scraper:
 
 			for item in json_request["projects"]:
 				dataframe_dict[index] = {
-										"name": item["name"], 
-									 	"category_name": item["category"]["name"], 
-									 	"URL": item["urls"]["web"]["project"], 
-									 	"creator_name": item["creator"]["name"], 
-									 	"creator_URL": item["creator"]["urls"]["web"]["user"],
-									 	"created": item["created_at"],
-									 	"launched": item["launched_at"],
-									 	"deadline": item["deadline"],
-									 	"goal": item["goal"],
-									 	"pledged": str(item["pledged"]) + item["currency"],
-									 	"pledged_usd": item["usd_pledged"],
-									 	"current_state": item["state"],
-									 	"backers": item["backers_count"],
-									 	"location": item["location"]["displayable_name"]
-										}
+								"name": item["name"], 
+								"category_name": item["category"]["name"], 
+								"URL": item["urls"]["web"]["project"], 
+								"creator_name": item["creator"]["name"], 
+								"creator_URL": item["creator"]["urls"]["web"]["user"],
+								"created": item["created_at"],
+								"launched": item["launched_at"],
+								"deadline": item["deadline"],
+								"goal": item["goal"],
+								"pledged": str(item["pledged"]) + item["currency"],
+								"pledged_usd": item["usd_pledged"],
+								"current_state": item["state"],
+								"backers": item["backers_count"],
+								"location": item["location"]["displayable_name"]
+								}
 
 				index += 1
 
